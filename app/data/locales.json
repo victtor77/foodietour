@@ -69,7 +69,7 @@
     {
         "nombre": "Nomada Sushi Bar",
         "imagen": "image_7.png",
-        "id_ubicacion": "7",
+        "id_ubicacion": 7,
         "tipo_cocina": "China",
         "ingredientes": "Papa, tomate, cebolla",
         "disponibilidad": true,

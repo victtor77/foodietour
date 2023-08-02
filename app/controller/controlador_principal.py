@@ -37,8 +37,9 @@ class ControladorPrincipal:
         indice_seleccionado = self.vista.lista_locales.curselection()
         # Obtiene el local seleccionado
         local_seleccionado = self.locales[indice_seleccionado[0]]
+        print(local_seleccionado.id_ubicacion)
         
-        ubicacion_seleccionada = Ubicacion(0, 0, 0, "")
+        ubicacion_seleccionada = Ubicacion(0, [0, 0] , "")
         
         # Busca la ubicación correspondiente al local seleccionado
         for ubicacion in self.ubicaciones:
@@ -51,10 +52,11 @@ class ControladorPrincipal:
         self.vista.mapa.set_position(latitud,longitud)
 
         print(f"Las coordenadas son: Latitud: {latitud}, Longitud: {longitud}")
-
+        print(self.ubicaciones)
 def seleccionar_ubicacion(marcador):
     if marcador.image_hidden is True:
         marcador.hide_image(False)
     else:
         marcador.hide_image(True)
     print("Ubicación seleccionada: ", marcador.text)
+    
